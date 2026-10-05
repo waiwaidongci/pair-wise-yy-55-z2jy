@@ -15,11 +15,15 @@ export interface Track {
   clef: 'treble' | 'bass' | 'alto'
   transposition: number
   color: string
+  pageTurn: number
+  pageTurnNoteId: string
   notes: ScoreNote[]
 }
 
 export interface ScoreComment {
   id: string
+  trackId?: string
+  noteId?: string
   measure: number
   author: string
   content: string
